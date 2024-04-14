@@ -12,8 +12,7 @@ let once = function (fn) {
             val = fn(...args);
             isCalled = true;
             return val;
-        }
-        else {
+        }else {
             return undefined;
         }
     }

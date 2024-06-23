@@ -5,7 +5,7 @@ The problem requires counting the number of continuous subarrays with exactly k 
 
 <b>Approach</b></br></br>
 
-</b>Initialize Variables:</br></b>
+<b>Initialize Variables:</b></br>
 
 n: Length of the input array nums.</br>
 cnt: An array to keep track of the count of prefix sums (number of odd numbers encountered).</br>
@@ -17,11 +17,12 @@ t: Variable to store the current count of odd numbers while iterating through th
 
 For each element v in nums, update the count of odd numbers (t) encountered so far. This is done by checking if v is odd using v & 1.
 Check if there exists a prefix sum t - k (i.e., a previous state where there were t - k odd numbers). If so, add the count of such prefix sums to ans.
-Increment the count of the current prefix sum (t) in the cnt array.</br>
+Increment the count of the current prefix sum (t) in the cnt array.</br></br>
 
-</b>Return the Result:</b></br>
+<b>Return the Result:</b></br>
 
 After iterating through the entire array, ans will contain the number of nice subarrays.</br>
+
 <b>Complexity</b></br>
 Time Complexity: The solution iterates through the array once and performs constant time operations in each iteration. Thus, the time complexity is (O(n)), where (n) is the length of the array.</br>
 Space Complexity: The space complexity is (O(n)) due to the additional cnt array used to store the count of prefix sums.</br>

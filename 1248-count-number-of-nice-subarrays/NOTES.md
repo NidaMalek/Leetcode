@@ -3,8 +3,9 @@ The problem requires counting the number of continuous subarrays with exactly k 
 
 </br>
 
-<b>Approach</b></br>
-Initialize Variables:</br>
+<b>Approach</b></br></br>
+
+</b>Initialize Variables:</br></b>
 
 n: Length of the input array nums.</br>
 cnt: An array to keep track of the count of prefix sums (number of odd numbers encountered).</br>
@@ -35,13 +36,14 @@ t = 0</br>
 
 </b>Iteration:</b></br>
 
-</b>Index 0:</b></br>
+Index 0:</br>
 
 nums[0] = 1 (odd)</br>
 t = 1 (1 odd number)</br>
 Update cnt: cnt[1] += 1 → cnt = [1, 1, 0, 0, 0, 0]</br>
 t - k = 1 - 3 = -2 (invalid)</br>
 ans = 0</br>
+
 Index 1:</br>
 
 nums[1] = 1 (odd)</br>
@@ -49,6 +51,7 @@ t = 2 (2 odd numbers)</br>
 Update cnt: cnt[2] += 1 → cnt = [1, 1, 1, 0, 0, 0]</br>
 t - k = 2 - 3 = -1 (invalid)</br>
 ans = 0</br>
+
 Index 2:</br>
 
 nums[2] = 2 (even)</br>
@@ -56,6 +59,7 @@ t = 2 (no change in odd count)</br>
 Update cnt: cnt[2] += 1 → cnt = [1, 1, 2, 0, 0, 0]</br>
 t - k = 2 - 3 = -1 (invalid)</br>
 ans = 0</br>
+
 Index 3:</br>
 
 nums[3] = 1 (odd)</br>
@@ -64,6 +68,7 @@ Update cnt: cnt[3] += 1 → cnt = [1, 1, 2, 1, 0, 0]</br>
 t - k = 3 - 3 = 0</br>
 cnt[0] = 1 (one valid prefix sum)</br>
 ans += 1 → ans = 1</br>
+
 Index 4:</br>
 
 nums[4] = 1 (odd)</br>
